@@ -17,7 +17,7 @@ app.set("view engine", "handlebars");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
-
+app.use(express.static('public'))
 app.use(
   session({
     name:"session",
@@ -51,5 +51,7 @@ app.use((request, response, next)=>{
 app.get('/', (req, res) => {
   return res.render('home')
 })
-
+app.get('/login', (req, res)=>{
+  return res.render('Login')
+})
 app.listen(3333)
