@@ -8,6 +8,8 @@ const app = express();
 
 const conn = require('./db/conn')
 
+const route = require('./routes/authRoutes')
+
 const hbs = exphbs.create({
   partialsDir: ['views/partials']
 })
@@ -62,18 +64,14 @@ app.use((request, response, next)=>{
 app.get('/', (req, res) => {
   return res.render('home')
 })
-app.get('/login', (req, res)=>{
-  return res.render('Login')
-})
-
-
-
-
-
 
 
 // importar Tabelas 
-const User = require('./models/User')
+const User = require('./models/User');
+
+
+// usar as rotas 
+app.use('/', route)
 
 conn
 .sync()
