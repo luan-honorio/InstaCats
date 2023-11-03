@@ -6,7 +6,7 @@ const flash = require("express-flash");
 
 const app = express();
 
-// const conn = require('./db/conn')
+const conn = require('./db/conn')
 
 const hbs = exphbs.create({
   partialsDir: ['views/partials']
@@ -48,10 +48,37 @@ app.use((request, response, next)=>{
   next()
 })
 
+
+
+
+
+
+
+
+
+
+
+
 app.get('/', (req, res) => {
   return res.render('home')
 })
 app.get('/login', (req, res)=>{
   return res.render('Login')
 })
-app.listen(3333)
+
+
+
+
+
+
+
+// importar Tabelas 
+const User = require('./models/User')
+
+conn
+.sync()
+.then(() =>{ // sincronia com banco ok ? libera : vai pro erro
+  app.listen(3333)
+})
+.catch((eerr) =>{console.log(eerr)})
+
