@@ -102,22 +102,6 @@ footer {
     font-size: 34px;
 }
 
-.Inputs {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 7px;
-}
- .Inputs2 input{
-    display: none;
-    height: 55px;
-    width: 472px;
-    background-color: #D9D9D9;
-    border: none;
-    border-radius: 15px;
-}
-
 .Inputs div {
     display: flex;
     flex-direction: column;
@@ -127,14 +111,56 @@ footer {
 .Inputs label {
     font-size: 25px;
 }
+.Inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 7px;
+}
 
-input {
+
+.Inputs2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.inputs2  div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.inputs2  label {
+    font-size: 25px;
+}
+
+
+
+.divInp input{
+
+        height: 55px;
+        width: 472px;
+        background-color: #D9D9D9;
+        border: none;
+        border-radius: 15px;
+    
+}
+.divinp input{
+    
     height: 78px;
     width: 472px;
     background-color: #D9D9D9;
     border: none;
     border-radius: 15px;
+
 }
+
+
+
+
 
 .btn {
     width: 120px;

@@ -68,12 +68,17 @@ app.get('/', (req, res) => {
 
 // importar Tabelas 
 const User = require('./models/User');
-
+const Publication = require('./models/Publication')
+const Like  = require('./models/Likes')
+const Comment = require('./models/Comment')
 
 // usar as rotas 
 app.use('/', route)
 
+
+
 conn
+// .sync({force : true})
 .sync()
 .then(() =>{ // sincronia com banco ok ? libera : vai pro erro
   app.listen(3333)
